@@ -394,7 +394,7 @@
               </div>
             </div>
              <div class="mb-3 row">
-              <label for="descripcionField" class="col-md-3 form-label">Descripción</label>
+              <label for="descripcionField" class="col-md-3 form-label">Descripciión</label>
               <div class="col-md-9">
                 <textarea type="text" class="form-control" id="descripcionField" name="descripcion"></textarea>
               </div>
