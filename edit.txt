@@ -1,0 +1,39 @@
+<script>
+   //editar informacion 
+    const peligroRiesgoMap = {
+        "Selecciona una opcion": ["Digita una opcion"],
+        "Contacto con vehiculos en movimiento": ["Atropello", "Colision", "Choque"],
+        "Contacto con sustancias quimicas": ["Irritacion","Quemadura quimica", "Intoxicacion", "Dano ambiental", "Incendio o explosion"],
+        "Trabajo en altura": ["caida a distinto nivel", "Caida a mismo nivel"],
+        "Contacto con proyeccion de particulas": ["Lesiones oculares", "lesiones cutaneas", "Contaminacion del ambiente"],
+        "Contacto con objetos": ["Golpeado por"],
+      
+    };
+
+
+    const peligroSelect = document.getElementById('usuarioField');
+    const riesgoSelect = document.getElementById('riesgoField');
+
+
+    function actualizarRiesgos() {
+        const peligroSeleccionado = peligroSelect.value;
+        const riesgosDisponibles = peligroRiesgoMap[peligroSeleccionado] || []; 
+
+   
+        riesgoSelect.innerHTML = '';
+
+   
+        riesgosDisponibles.forEach(riesgo => {
+            const option = document.createElement('option');
+            option.value = riesgo;
+            option.text = riesgo;
+            riesgoSelect.add(option);
+        });
+    }
+
+
+    peligroSelect.addEventListener('change', actualizarRiesgos);
+
+
+    actualizarRiesgos();
+</script> 
